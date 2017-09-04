@@ -57,10 +57,10 @@ extension StudentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell", for: indexPath)
         
-        cell.textLabel?.text = String(studentArray[indexPath.row].id)
-        cell.detailTextLabel?.text = studentArray[indexPath.row].studentName
-//        cell.detailTextLabel?.text = studentArray[indexPath.row].goesTo?.collegeName
-//        cell.detailTextLabel?.text = String(describing: studentArray[indexPath.row].goesTo?.id)
+        //cell.textLabel?.text = String(studentArray[indexPath.row].id)
+        cell.textLabel?.text = studentArray[indexPath.row].studentName
+        cell.detailTextLabel?.text = studentArray[indexPath.row].goesTo?.collegeName
+        //cell.detailTextLabel?.text = String(describing: studentArray[indexPath.row].goesTo?.id)
         
         return cell
     }

@@ -38,10 +38,7 @@ class StudentDetailsViewController: UIViewController {
             let predicate = NSPredicate(format: "collegeName CONTAINS[cd] %@",self.myCollege)
             let request = NSFetchRequest<College>(entityName: "College")
             request.predicate = predicate
-            
-            
-            
-            
+   
             do {
                 let collegeObject = try context.fetch(request)
                 //retrieve the first search match
@@ -49,7 +46,7 @@ class StudentDetailsViewController: UIViewController {
                 print(myColl.id)
                 print(myColl.collegeName)
                 
-                myColl.addToContains(studentEntity)   
+                myColl.addToContains(studentEntity)
             } catch {
                 print("Unable to fetch")
             }
